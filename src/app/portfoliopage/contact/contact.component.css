@@ -1,0 +1,65 @@
+#quote{
+    margin-top: 2rem;
+    font-size: 25px;
+    color: #85B1EE;
+    
+}
+
+
+i{
+  color:#01070F ;
+}
+hr {
+    border-color: #041A39;
+  }
+
+  i{
+    transition: all 0.2s ease-in-out;
+  }
+  
+  i:hover {
+    animation: shake 0.8s infinite;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  #contactinfo{
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 1rem;
+  }
+
+  p a {
+    text-decoration: none !important;
+    color: black !important;
+  }
+
+  p a:hover {
+    text-decoration: none !important;
+    color: #85B1EE !important;
+  } 
+  
+
+  
+  @media screen and (max-width: 991px) {
+    #contactinfo {
+      font-size: 14px;
+      margin-bottom: 10px;
+      
+    }
+    p{
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+  }
+  
