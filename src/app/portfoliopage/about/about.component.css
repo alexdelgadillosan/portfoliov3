@@ -69,13 +69,7 @@
     .containerpac {
         overflow: hidden;       
        
-      }
-    .scrolling-images img {
-        
-        width: 20px;
-        height: 20px;
-        object-fit: cover;
-      }
+      }    
   }
   
   @keyframes scroll-images {
