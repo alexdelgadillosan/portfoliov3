@@ -1,0 +1,57 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+#image{
+    width: 200px;
+    height: auto;
+}
+
+#imgStart{
+    width: 200px;
+    height: auto;
+}
+#typewriter {
+    font-family: 'VT323', monospace;  
+    font-size: 32px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .1em solid white;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+  .divcenter {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .fade-in.show {
+    opacity: 1;
+  }
+
+  @media (max-width: 500px) {
+    #typewriter {
+      font-family: 'VT323', monospace;  
+      font-size: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: .1em solid white;
+      text-align: center;
+      display: inline-block;
+    }
+  }
+  
+
+  

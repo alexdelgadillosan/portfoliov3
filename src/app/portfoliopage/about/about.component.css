@@ -1,0 +1,108 @@
+.container{
+  margin-top: 1rem;
+}
+#pacman{
+    width: 10rem;
+    margin-left: 40%;
+   
+}
+
+#hobbies{
+  border-color: #0A418E;
+  border-width: 3px;
+}
+
+#photo{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  
+}
+
+@media (max-width: 768px) {
+  #photo{   
+    margin-top: 1rem !important; 
+  }
+}
+
+#cvButton{
+    animation: shake 0.8s infinite;
+    text-align: right;   
+    margin-left: auto;
+    
+    
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.containerpac {
+ 
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+  }
+  .scrolling-images {
+    display: flex;
+    animation: scroll-images 15s linear infinite;
+  }
+
+
+
+  @media (max-width: 500px) {
+    #pacman{
+        width: 10rem;
+        margin-left: 50%;
+       
+    }
+    .containerpac {
+        overflow: hidden;       
+       
+      }
+    .scrolling-images img {
+        
+        width: 20px;
+        height: 20px;
+        object-fit: cover;
+      }
+  }
+  
+  @keyframes scroll-images {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .scrolling-images img {
+    margin-right: 20px;
+    width: 90px;
+    height: 65px;
+  
+  }
+  
+#description{
+    font-size: 20px;
+    padding: 15px;
+}
+
+#skills{
+    border: 3px solid #1068E2;
+    padding: 28px;
+}
+
+hr {
+    border-color: #041A39;
+  }
