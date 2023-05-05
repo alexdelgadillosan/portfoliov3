@@ -7,18 +7,17 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="/" >Home</a>
+          <a class="nav-link" href="/" (click)="collapseNavbar()">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"href="#"(click)="scrollToAbout()">About</a>
+          <a class="nav-link" href="#" (click)="collapseNavbar(); scrollToAbout()">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"(click)="scrollToProjects()">Projects</a>
+          <a class="nav-link" href="#" (click)="collapseNavbar(); scrollToProjects()">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"(click)="scrollToContact()">Contact</a>
+          <a class="nav-link" href="#" (click)="collapseNavbar(); scrollToContact()">Contact</a>
         </li>
-       
       </ul>
     </div>
   </div>

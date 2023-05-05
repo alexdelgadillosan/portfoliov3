@@ -8,6 +8,11 @@ import { Component, ElementRef } from '@angular/core';
 export class NavbarComponent {
   constructor(private elementRef: ElementRef) {}
 
+  collapseNavbar() {
+    const navbar = this.elementRef.nativeElement.querySelector('.navbar-collapse');
+    navbar.classList.remove('show');
+  }
+
   scrollToContact() {
     const contactSection = document.getElementById('contact')!;
     contactSection.scrollIntoView({behavior: 'smooth'});

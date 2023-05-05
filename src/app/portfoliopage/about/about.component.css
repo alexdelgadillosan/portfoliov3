@@ -1,5 +1,5 @@
 .container{
-  margin-top: 1rem;
+  margin-top: .5rem;
 }
 #pacman{
     width: 10rem;
@@ -7,6 +7,12 @@
    
 }
 
+
+#photop{
+  width: 450px;
+  height: 445px;
+  border-radius: 15%;
+}
 #hobbies{
   border-color: #0A418E;
   border-width: 3px;
@@ -23,12 +29,36 @@
   #photo{   
     margin-top: 1rem !important; 
   }
+
+  #photop{
+    width: 350px;
+    height: 345px;
+    margin-bottom: 1rem;
+    border-radius: 15%;
+  }
+
+  #about{
+    padding-top: 3rem !important;
+    padding-bottom: 0px !important;
+  }
+}
+
+@media (max-width: 379px) {  
+  #photop{
+    width: 250px;
+    height: 245px;
+    margin-bottom: 1rem;
+    border-radius: 15%;
+  }
+
+
+
 }
 
 #cvButton{
     animation: shake 0.8s infinite;
     text-align: right;   
-    margin-left: auto;
+    margin-right: auto;
     
     
   }
