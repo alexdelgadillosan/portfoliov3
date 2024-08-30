@@ -1,12 +1,13 @@
-
-      <div class="card h-100">
-        <a [href]="linkUrl" target="_blank">
-            <img [src]="imgSrc" alt="Card image cap" class="card-img-top">
-          </a>
-        <div class="card-body">
-          <h5 class="card-title">{{title}}</h5>
-          <p class="card-text">{{description}}</p>
-          <p class="card-text text-muted">{{shortDescription}}</p>
-        </div>
-      </div>
-  
+<div class="card h-100">
+  <a
+    [href]="linkUrl || 'javascript:void(0)'"
+    [attr.target]="linkUrl ? '_blank' : null"
+  >
+    <img [src]="imgSrc" alt="Card image cap" class="card-img-top" />
+  </a>
+  <div class="card-body">
+    <h5 class="card-title">{{ title }}</h5>
+    <p class="card-text">{{ description }}</p>
+    <p class="card-text text-muted">{{ shortDescription }}</p>
+  </div>
+</div>

@@ -1,15 +1,28 @@
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
 
-.container{
-    margin-top: 1rem;
+.col-md-4 {
+  margin-bottom: 10px;
 }
 
+.card-img-top {
+  /* object-fit: contain; */
+  height: 24vh; /* Ajusta según tus necesidades */
+  width: 100%;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+.container {
+  margin-top: 1rem;
+}
 
 @media (max-width: 767px) {
-    #projects {
-      padding-bottom: 24px !important;
-    }
+  #projects {
+    padding-bottom: 24px !important;
   }
+}
