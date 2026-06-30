@@ -7,52 +7,65 @@
           <hr />
         </h1>
         <p class="lead" id="description">
-          I'm a FullStack developer with nearly 5 years of experience building
-          web applications, mobile apps, and desktop apps. <br />
-          I have a passion for creating and imporving life with technology.
+          I'm a Senior Software Engineer with 6+ years of experience building
+          scalable web, mobile, and cloud applications for financial institutions
+          and enterprise clients. <br />
+          I've worked across multiple stacks — from C# and .NET to JavaScript,
+          TypeScript, and Python — building microservices, modern front ends, and
+          cloud-native solutions. Lately I've also been focused on AI-powered
+          systems using LLMs and RAG. Passionate about clean code, performance,
+          and improving life with technology.
         </p>
         <div id="skills">
           <p class="lead">My skills include:</p>
           <ul class="lead">
             <li>
-              Front-End Technologies: HTML, CSS, JavaScript, Angular, Bootstrap
+              Front-End: Angular, React, Next.js, JavaScript, TypeScript,
+              HTML, CSS, Flutter
             </li>
             <li>
-              Back-End Technologies: Node.js, Express.js, C#, Python,
-              JavaScript, TypeScript, .NET
+              Back-End: C#, .NET Core, Node.js, NestJS, Python, RESTful APIs
             </li>
             <li>
-              Database Technologies: MySQL, MongoDB, SQL Server, PostgreSQL
+              Cloud &amp; DevOps: Azure, AWS, GCP, Docker, Kubernetes, Jenkins,
+              Git
             </li>
-            <li>Mobile App Development: Flutter, Dart, Xamarin</li>
+            <li>
+              Databases: SQL Server, PostgreSQL, MongoDB, NoSQL, Vector
+              Databases
+            </li>
+            <li>
+              Architecture &amp; AI: Microservices, Clean Architecture, SOLID,
+              LangGraph, RAG, LLMs
+            </li>
           </ul>
-          <div class="row">
-            <div class="col-4">
-              <img
-                src="../../../assets/pacmann.gif"
-                alt="Profile Picture"
-                class="img-fluid rounded-circle mb-3"
-                id="pacman"
-              />
-            </div>
-            <div class="col-8 d-flex">
-              <div class="containerpac">
-                <div class="scrolling-images">
-                  <img src="../../../assets/logos/html.png" />
-                  <img src="../../../assets/logos/javascript.png" />
-                  <img src="../../../assets/logos/angular.png" />
-                  <img src="../../../assets/logos/bootstrap.png" />
-                  <img src="../../../assets/logos/express.png" />
-                  <img src="../../../assets/logos/flutter.png" alt="" />
-                  <img src="../../../assets/logos/mongo.png" alt="" />
-                  <img src="../../../assets/logos/nodejs.png" alt="" />
-                  <img src="../../../assets/logos/sql.png" alt="" />
-                  <img src="../../../assets/logos/python.png" alt="" />
-                  <img src="../../../assets/logos/dart.png" alt="" />
-                  <img src="../../../assets/logos/css.png" alt="" />
+          <div class="pacman-track">
+            <div class="containerpac">
+              <div class="scrolling-images">
+                <div class="scrolling-images-track">
+                  <div class="scrolling-images-set">
+                    <img
+                      *ngFor="let logo of logos"
+                      [src]="'../../../assets/logos/' + logo.file"
+                      [alt]="logo.alt"
+                    />
+                  </div>
+                  <div class="scrolling-images-set" aria-hidden="true">
+                    <img
+                      *ngFor="let logo of logos"
+                      [src]="'../../../assets/logos/' + logo.file"
+                      [alt]="logo.alt"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
+            <img
+              src="../../../assets/pacmann.gif"
+              alt="Pac-Man eating tech logos"
+              class="img-fluid"
+              id="pacman"
+            />
           </div>
         </div>
       </div>
@@ -60,14 +73,15 @@
         <div class="d-flex flex-column h-100">
           <div id="photo" class="flex-grow-1">
             <img
-              src="../../../assets/me.png"
-              alt="Profile Picture"
+              src="../../../assets/pictures/IMG-20241124-WA0040.jpg"
+              alt="Alejandro Delgadillo walking with his dog"
               class="img-fluid"
               id="photop"
             />
           </div>
           <a
-            href="https://drive.google.com/file/d/1-YUM72yC0OBaxXRo-q4zeJYcN5t0RkVa/view?usp=drive_link"
+            *ngIf="cvUrl"
+            [href]="cvUrl"
             class="btn btn-primary btn-block mb-2"
             id="cvButton"
             target="_blank"
@@ -77,8 +91,10 @@
             <div class="card-body">
               <h4 class="card-title">Hobbies</h4>
               <p class="card-text">
-                When I'm not coding, I enjoy reading, painting, going to the
-                gym, and hanging out with people I love.
+                When I'm not coding, I like to stay active — working out,
+                walking my dog, or getting outside. I unwind with reading,
+                painting, video games, and a good film or series. Most of all,
+                I love spending time with the people I care about.
               </p>
             </div>
           </div>

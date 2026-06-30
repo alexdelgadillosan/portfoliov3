@@ -1,15 +1,47 @@
 .container {
   margin-top: 0.5rem;
 }
+.pacman-track {
+  --pacman-size: 10rem;
+  --pacman-mouth: calc(var(--pacman-size) * 0.54);
+  display: grid;
+  grid-template-columns: var(--pacman-size) 1fr;
+  align-items: center;
+  overflow: hidden;
+  min-height: var(--pacman-size);
+  isolation: isolate;
+}
+
 #pacman {
-  width: 10rem;
-  margin-left: 40%;
+  grid-column: 1;
+  grid-row: 1;
+  width: var(--pacman-size);
+  z-index: 10;
+  position: relative;
+  transform: translate3d(0, 0, 1px);
+  pointer-events: none;
+}
+
+.containerpac {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  z-index: 1;
+  container-type: inline-size;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  clip-path: inset(0 0 0 var(--pacman-mouth));
 }
 
 #photop {
   width: 450px;
-  height: 445px;
+  height: 520px;
   border-radius: 15%;
+  object-fit: cover;
+  object-position: center;
 }
 #hobbies {
   border-color: #0a418e;
@@ -29,7 +61,7 @@
 
   #photop {
     width: 350px;
-    height: 345px;
+    height: 405px;
     margin-bottom: 1rem;
     border-radius: 15%;
   }
@@ -43,7 +75,7 @@
 @media (max-width: 379px) {
   #photop {
     width: 250px;
-    height: 245px;
+    height: 290px;
     margin-bottom: 1rem;
     border-radius: 15%;
   }
@@ -67,39 +99,42 @@
   }
 }
 
-.containerpac {
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .scrolling-images {
-  display: flex;
-  animation: scroll-images 12s linear infinite;
+  position: relative;
+  z-index: 0;
 }
 
-@media (max-width: 500px) {
-  #pacman {
-    width: 10rem;
-    margin-left: 50%;
-  }
-  .containerpac {
-    overflow: hidden;
-  }
+.scrolling-images-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-images 24s linear infinite;
+}
+
+.scrolling-images-set {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 @keyframes scroll-images {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
-.scrolling-images img {
+
+.scrolling-images-set img {
   margin-right: 20px;
   width: 90px;
   height: 65px;
+}
+
+@media (max-width: 500px) {
+  .pacman-track {
+    --pacman-size: 8rem;
+  }
 }
 
 #description {
