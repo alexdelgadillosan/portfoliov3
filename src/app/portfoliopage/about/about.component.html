@@ -72,12 +72,22 @@
       <div class="col-md-6 flex-column">
         <div class="d-flex flex-column h-100">
           <div id="photo" class="flex-grow-1">
-            <img
-              src="../../../assets/pictures/IMG-20241124-WA0040.jpg"
-              alt="Alejandro Delgadillo walking with his dog"
-              class="img-fluid"
-              id="photop"
-            />
+            <picture>
+              <source
+                srcset="../../../assets/pictures/profile.webp"
+                type="image/webp"
+              />
+              <img
+                src="../../../assets/pictures/profile.jpg"
+                alt="Alejandro Delgadillo walking with his dog"
+                class="img-fluid"
+                id="photop"
+                width="450"
+                height="520"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </picture>
           </div>
           <a
             *ngIf="cvUrl"
