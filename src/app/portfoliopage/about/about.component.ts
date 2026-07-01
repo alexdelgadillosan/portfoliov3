@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -6,8 +6,11 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit, AfterViewInit {
   cvUrl = '';
+  photoLoaded = false;
+
+  @ViewChild('profilePhoto') profilePhoto?: ElementRef<HTMLImageElement>;
 
   readonly logos = [
     { file: 'html.png', alt: 'HTML' },
@@ -55,5 +58,16 @@ export class AboutComponent implements OnInit {
         this.cvUrl = '';
       },
     });
+  }
+
+  ngAfterViewInit(): void {
+    const img = this.profilePhoto?.nativeElement;
+    if (img?.complete && img.naturalWidth > 0) {
+      this.photoLoaded = true;
+    }
+  }
+
+  onPhotoLoad(): void {
+    this.photoLoaded = true;
   }
 }
