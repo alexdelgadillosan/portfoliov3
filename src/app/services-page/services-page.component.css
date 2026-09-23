@@ -28,12 +28,22 @@
 }
 
 .services-page__lead {
-  max-width: 42rem;
+  max-width: 44rem;
   color: #333;
+  font-size: 1.45rem;
+  line-height: 1.5;
+}
+
+.services-page__intro h1 {
+  font-size: 2.75rem;
+}
+
+.services-page__intro h2 {
+  font-size: 2.35rem;
 }
 
 .service-row {
-  padding: 1.25rem 0;
+  padding: 1.4rem 0;
   border-bottom: 1px solid #dde3ea;
 }
 
@@ -42,23 +52,26 @@
 }
 
 .service-row h3 {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.65rem;
   color: #041a39;
+  font-size: 1.85rem;
 }
 
 .service-row__description {
-  font-size: 1.15rem;
-  line-height: 1.45;
-  margin-bottom: 0.65rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
 }
 
 .service-row__highlights {
   margin: 0;
   padding-left: 1.2rem;
+  font-size: 1.3rem;
+  line-height: 1.45;
 }
 
 .service-row__highlights li {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
 }
 
 .project-row {
