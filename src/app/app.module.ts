@@ -11,7 +11,7 @@ import { AboutComponent } from './portfoliopage/about/about.component';
 import { ContactComponent } from './portfoliopage/contact/contact.component';
 import { ProjectspageComponent } from './portfoliopage/projectspage/projectspage.component';
 import { ProjectviewComponent } from './portfoliopage/projectspage/projectview/projectview.component';
-import { ProjectsOnlyComponent } from './projects-only/projects-only.component';
+import { ServicesPageComponent } from './services-page/services-page.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +23,10 @@ import { ProjectsOnlyComponent } from './projects-only/projects-only.component';
     ContactComponent,
     ProjectspageComponent,
     ProjectviewComponent,
-    ProjectsOnlyComponent,
+    ServicesPageComponent,
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

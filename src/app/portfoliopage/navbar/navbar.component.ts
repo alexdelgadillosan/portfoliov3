@@ -18,8 +18,18 @@ export class NavbarComponent {
     navbar?.classList.remove('show');
   }
 
+  private path(): string {
+    return this.router.url.split('?')[0].split('#')[0];
+  }
+
   private isOnPortfolio(): boolean {
-    return this.router.url.split('?')[0].split('#')[0] === '/portfolio';
+    return this.path() === '/portfolio';
+  }
+
+  private isOnServices(): boolean {
+    return (
+      this.path() === '/services-en' || this.path() === '/services-es'
+    );
   }
 
   private scrollToId(id: string) {
@@ -43,11 +53,10 @@ export class NavbarComponent {
   }
 
   scrollToProjects() {
-    // On /portfolio: scroll to #projects. Never navigate to /projects (URL-only page).
-    if (this.isOnPortfolio()) {
+    if (this.isOnPortfolio() || this.isOnServices()) {
       this.scrollToId('projects');
     } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      this.goPortfolioThenScroll('projects');
     }
     return false;
   }

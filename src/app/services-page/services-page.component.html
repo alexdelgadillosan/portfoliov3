@@ -1,15 +1,51 @@
 <app-navbar></app-navbar>
 
-<section class="projects-only py-5">
+<section class="services-page py-5">
   <div class="container">
-    <header class="projects-only__intro mb-5">
-      <h1>Projects</h1>
+    <div class="services-page__lang" aria-label="Language">
+      <button
+        type="button"
+        class="lang-btn"
+        [class.active]="lang === 'en'"
+        (click)="switchLang('en')"
+      >
+        EN
+      </button>
+      <span class="lang-sep">|</span>
+      <button
+        type="button"
+        class="lang-btn"
+        [class.active]="lang === 'es'"
+        (click)="switchLang('es')"
+      >
+        ES
+      </button>
+    </div>
+
+    <header id="services" class="services-page__intro mb-4">
+      <h1>{{ copy.servicesTitle }}</h1>
       <hr />
-      <p class="lead projects-only__lead">
-        Selected work across AI agents, distributed systems, reliability,
-        developer platforms, and product builds — each with a short walkthrough
-        of what it demonstrates.
-      </p>
+      <p class="lead services-page__lead">{{ copy.servicesLead }}</p>
+    </header>
+
+    <article
+      class="service-row"
+      *ngFor="let service of services"
+      [attr.id]="'service-' + service.id"
+    >
+      <div class="service-row__body">
+        <h3>{{ service.title }}</h3>
+        <p class="service-row__description">{{ service.description }}</p>
+        <ul class="service-row__highlights">
+          <li *ngFor="let item of service.highlights">{{ item }}</li>
+        </ul>
+      </div>
+    </article>
+
+    <header id="projects" class="services-page__intro mt-5 mb-4">
+      <h2>{{ copy.projectsTitle }}</h2>
+      <hr />
+      <p class="lead services-page__lead">{{ copy.projectsLead }}</p>
     </header>
 
     <article
@@ -43,7 +79,7 @@
             [href]="project.demoUrl"
             target="_blank"
             rel="noopener"
-            >Live Demo</a
+            >{{ copy.liveDemo }}</a
           >
           <span *ngIf="project.demoUrl && project.githubUrl"> · </span>
           <a
@@ -51,10 +87,17 @@
             [href]="project.githubUrl"
             target="_blank"
             rel="noopener"
-            >GitHub</a
+            >{{ copy.github }}</a
           >
         </p>
       </div>
     </article>
+
+    <p class="services-page__cta mt-5">
+      {{ copy.ctaText }}
+      <a href="/portfolio#contact" (click)="goContact($event)">{{
+        copy.ctaLink
+      }}</a>
+    </p>
   </div>
 </section>

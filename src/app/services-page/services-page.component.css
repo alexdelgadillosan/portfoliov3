@@ -1,0 +1,131 @@
+.services-page__lang {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.15rem;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0.15rem 0.35rem;
+}
+
+.lang-btn.active {
+  color: #0a418e;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.lang-sep {
+  color: #9ca3af;
+}
+
+.services-page__lead {
+  max-width: 42rem;
+  color: #333;
+}
+
+.service-row {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #dde3ea;
+}
+
+.service-row:last-of-type {
+  border-bottom: 1px solid #dde3ea;
+}
+
+.service-row h3 {
+  margin-bottom: 0.6rem;
+  color: #041a39;
+}
+
+.service-row__description {
+  font-size: 1.15rem;
+  line-height: 1.45;
+  margin-bottom: 0.65rem;
+}
+
+.service-row__highlights {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.service-row__highlights li {
+  margin-bottom: 0.25rem;
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: 1.75rem;
+  align-items: start;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #dde3ea;
+}
+
+.project-row:last-of-type {
+  border-bottom: none;
+}
+
+.project-row__media {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.project-row__media img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.project-row__body h3 {
+  margin-bottom: 0.75rem;
+}
+
+.project-row__description {
+  font-size: 1.15rem;
+  line-height: 1.45;
+  margin-bottom: 0.75rem;
+}
+
+.project-row__highlights {
+  margin: 0 0 0.75rem;
+  padding-left: 1.2rem;
+}
+
+.project-row__highlights li {
+  margin-bottom: 0.25rem;
+}
+
+.project-row__tech {
+  margin-bottom: 0.5rem;
+}
+
+.project-row__links a {
+  font-size: 1.1rem;
+}
+
+.services-page__cta {
+  font-size: 1.25rem;
+}
+
+.services-page__cta a {
+  margin-left: 0.35rem;
+}
+
+@media (max-width: 768px) {
+  .project-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
