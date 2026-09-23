@@ -11,6 +11,7 @@ import { AboutComponent } from './portfoliopage/about/about.component';
 import { ContactComponent } from './portfoliopage/contact/contact.component';
 import { ProjectspageComponent } from './portfoliopage/projectspage/projectspage.component';
 import { ProjectviewComponent } from './portfoliopage/projectspage/projectview/projectview.component';
+import { ProjectsOnlyComponent } from './projects-only/projects-only.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProjectviewComponent } from './portfoliopage/projectspage/projectview/p
     AboutComponent,
     ContactComponent,
     ProjectspageComponent,
-    ProjectviewComponent
+    ProjectviewComponent,
+    ProjectsOnlyComponent,
   ],
   imports: [
     BrowserModule,

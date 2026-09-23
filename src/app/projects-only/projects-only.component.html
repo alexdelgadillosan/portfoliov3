@@ -1,0 +1,99 @@
+<app-navbar></app-navbar>
+
+<section class="projects-only py-5">
+  <div class="container">
+    <header class="projects-only__intro mb-5">
+      <h1>Projects</h1>
+      <hr />
+      <p class="lead projects-only__lead">
+        Systems and demos that show how I design AI agents, distributed
+        backends, reliability tooling, and developer platforms — plus a few
+        earlier product and client builds.
+      </p>
+    </header>
+
+    <h2 class="projects-only__section-title">Systems &amp; demos</h2>
+
+    <article
+      class="project-row"
+      *ngFor="let project of featured"
+      [attr.id]="project.id"
+    >
+      <a
+        class="project-row__media"
+        [href]="project.demoUrl || project.githubUrl || '#'"
+        [attr.target]="project.demoUrl || project.githubUrl ? '_blank' : null"
+        [attr.rel]="project.demoUrl || project.githubUrl ? 'noopener' : null"
+      >
+        <img
+          [src]="project.image"
+          [alt]="project.title"
+          [style.background]="project.imageBg || '#f0f0f0'"
+        />
+      </a>
+      <div class="project-row__body">
+        <h3>{{ project.title }}</h3>
+        <p class="project-row__description">{{ project.description }}</p>
+        <ul class="project-row__highlights">
+          <li *ngFor="let item of project.highlights">{{ item }}</li>
+        </ul>
+        <p class="project-row__tech text-muted">{{ project.tech }}</p>
+        <p class="project-row__links">
+          <a
+            *ngIf="project.demoUrl"
+            [href]="project.demoUrl"
+            target="_blank"
+            rel="noopener"
+            >Live Demo</a
+          >
+          <span *ngIf="project.demoUrl && project.githubUrl"> · </span>
+          <a
+            *ngIf="project.githubUrl"
+            [href]="project.githubUrl"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+        </p>
+      </div>
+    </article>
+
+    <h2 class="projects-only__section-title mt-5">Other work</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let project of other">
+        <div class="card h-100 other-card">
+          <ng-container *ngIf="project.demoUrl; else otherImg">
+            <a [href]="project.demoUrl" target="_blank" rel="noopener">
+              <img
+                [src]="project.image"
+                [alt]="project.title"
+                class="card-img-top"
+                style="object-fit: contain"
+              />
+            </a>
+          </ng-container>
+          <ng-template #otherImg>
+            <img
+              [src]="project.image"
+              [alt]="project.title"
+              class="card-img-top"
+              style="object-fit: contain"
+            />
+          </ng-template>
+          <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <p class="card-text">{{ project.description }}</p>
+            <p class="card-text text-muted">{{ project.tech }}</p>
+            <a
+              *ngIf="project.demoUrl"
+              [href]="project.demoUrl"
+              target="_blank"
+              rel="noopener"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
