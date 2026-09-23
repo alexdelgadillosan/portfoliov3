@@ -7,6 +7,5 @@ import { PROJECTS, ProjectItem } from './projects.data';
   styleUrls: ['./projects-only.component.css'],
 })
 export class ProjectsOnlyComponent {
-  featured: ProjectItem[] = PROJECTS.filter((p) => p.featured);
-  other: ProjectItem[] = PROJECTS.filter((p) => !p.featured);
+  projects: ProjectItem[] = PROJECTS;
 }
