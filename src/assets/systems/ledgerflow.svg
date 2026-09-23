@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0a1628"/>
+  <text x="40" y="80" fill="#5eead4" font-family="monospace" font-size="36">LEDGERFLOW</text>
+  <text x="40" y="130" fill="#94a3b8" font-family="monospace" font-size="18">payments · outbox · idempotency</text>
+  <rect x="40" y="180" width="160" height="60" rx="4" fill="#12263f" stroke="#5eead4"/>
+  <text x="60" y="215" fill="#e2e8f0" font-family="monospace" font-size="16">API</text>
+  <rect x="240" y="180" width="160" height="60" rx="4" fill="#12263f" stroke="#5eead4"/>
+  <text x="260" y="215" fill="#e2e8f0" font-family="monospace" font-size="16">OUTBOX</text>
+  <rect x="440" y="180" width="160" height="60" rx="4" fill="#12263f" stroke="#5eead4"/>
+  <text x="460" y="215" fill="#e2e8f0" font-family="monospace" font-size="16">LEDGER</text>
+  <rect x="640" y="180" width="120" height="60" rx="4" fill="#12263f" stroke="#fbbf24"/>
+  <text x="655" y="215" fill="#e2e8f0" font-family="monospace" font-size="16">BUS</text>
+</svg>

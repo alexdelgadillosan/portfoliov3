@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0c0f0a"/>
+  <text x="40" y="80" fill="#a3e635" font-family="monospace" font-size="36">CHAOSLAB</text>
+  <text x="40" y="130" fill="#94a3b8" font-family="monospace" font-size="18">fault injection · observability</text>
+  <circle cx="80" cy="220" r="14" fill="#a3e635"/>
+  <circle cx="160" cy="220" r="14" fill="#fbbf24"/>
+  <circle cx="240" cy="220" r="14" fill="#ef4444"/>
+  <text x="40" y="280" fill="#e2e8f0" font-family="monospace" font-size="16">inject latency · kill db · 50% 500s</text>
+</svg>

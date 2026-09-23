@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0b1220"/>
+  <text x="40" y="80" fill="#60a5fa" font-family="monospace" font-size="36">LAUNCHPAD</text>
+  <text x="40" y="130" fill="#94a3b8" font-family="monospace" font-size="18">self-service developer platform</text>
+  <text x="40" y="220" fill="#93c5fd" font-family="monospace" font-size="16">repo → CI → helm → argocd → k8s</text>
+  <rect x="40" y="260" width="700" height="12" rx="6" fill="#1e293b"/>
+  <rect x="40" y="260" width="520" height="12" rx="6" fill="#3b82f6"/>
+</svg>
