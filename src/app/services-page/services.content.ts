@@ -153,6 +153,14 @@ const PROJECT_MEDIA: Omit<
   'description' | 'highlights' | 'tech'
 >[] = [
   {
+    id: 'spotilist',
+    title: 'Spotilist',
+    image: 'assets/systems/spotilist.svg',
+    imageBg: '#121212',
+    demoUrl: 'https://alexdelgadillosan.github.io/spotilist/',
+    githubUrl: 'https://github.com/alexdelgadillosan/spotilist',
+  },
+  {
     id: 'ledgerflow',
     title: 'LedgerFlow',
     image: 'assets/systems/ledgerflow.svg',
@@ -207,6 +215,13 @@ const PROJECT_TEXT: Record<
   Record<string, Pick<ProjectItem, 'description' | 'highlights' | 'tech' | 'title'>>
 > = {
   en: {
+    spotilist: {
+      title: 'Spotilist',
+      description:
+        'Bulk-edit Spotify playlists: multi-select copy/move/delete, merge with dedupe, filters, and JSON/CSV import-export.',
+      highlights: [],
+      tech: 'Vite · TypeScript · Spotify Web API PKCE (live)',
+    },
     ledgerflow: {
       title: 'LedgerFlow',
       description:
@@ -258,6 +273,13 @@ const PROJECT_TEXT: Record<
     },
   },
   es: {
+    spotilist: {
+      title: 'Spotilist',
+      description:
+        'Edición masiva de playlists de Spotify: copiar/mover/borrar, merge con dedupe, filtros e import/export JSON/CSV.',
+      highlights: [],
+      tech: 'Vite · TypeScript · Spotify Web API PKCE (en vivo)',
+    },
     ledgerflow: {
       title: 'LedgerFlow',
       description:
