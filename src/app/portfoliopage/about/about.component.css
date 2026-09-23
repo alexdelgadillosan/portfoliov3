@@ -41,7 +41,7 @@
   height: 520px;
   border-radius: 15%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 18%;
   opacity: 0;
   transition: opacity 0.35s ease;
 }
@@ -59,6 +59,22 @@
   justify-content: center;
   align-items: center;
   min-height: 520px;
+}
+
+.photo-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.photo-caption {
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  color: #0a418e;
+  opacity: 0.85;
+  text-align: center;
 }
 
 #photo picture {
