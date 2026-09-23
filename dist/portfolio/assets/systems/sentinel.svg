@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#07151a"/>
+  <text x="40" y="80" fill="#22d3ee" font-family="monospace" font-size="36">SENTINEL AI</text>
+  <text x="40" y="130" fill="#94a3b8" font-family="monospace" font-size="18">agentic incident investigation</text>
+  <rect x="40" y="180" width="200" height="50" rx="4" fill="#0f2a33" stroke="#22d3ee"/>
+  <text x="55" y="210" fill="#e2e8f0" font-family="monospace" font-size="14">RAG + TOOLS</text>
+  <rect x="280" y="180" width="200" height="50" rx="4" fill="#0f2a33" stroke="#fbbf24"/>
+  <text x="310" y="210" fill="#e2e8f0" font-family="monospace" font-size="14">HITL APPROVE</text>
+  <rect x="520" y="180" width="220" height="50" rx="4" fill="#0f2a33" stroke="#22d3ee"/>
+  <text x="545" y="210" fill="#e2e8f0" font-family="monospace" font-size="14">LANGFUSE TRACE</text>
+</svg>
