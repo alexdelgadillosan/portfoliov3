@@ -155,7 +155,7 @@ const PROJECT_MEDIA: Omit<
   {
     id: 'spotilist',
     title: 'Spotilist',
-    image: 'assets/systems/spotilist.svg',
+    image: 'assets/systems/spotilist.png',
     imageBg: '#121212',
     demoUrl: 'https://alexdelgadillosan.github.io/spotilist/',
     githubUrl: 'https://github.com/alexdelgadillosan/spotilist',
