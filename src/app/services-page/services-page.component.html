@@ -36,9 +36,6 @@
       <div class="service-row__body">
         <h3>{{ service.title }}</h3>
         <p class="service-row__description">{{ service.description }}</p>
-        <ul class="service-row__highlights">
-          <li *ngFor="let item of service.highlights">{{ item }}</li>
-        </ul>
       </div>
     </article>
 
@@ -69,9 +66,6 @@
       <div class="project-row__body">
         <h3>{{ project.title }}</h3>
         <p class="project-row__description">{{ project.description }}</p>
-        <ul class="project-row__highlights" *ngIf="project.highlights?.length">
-          <li *ngFor="let item of project.highlights">{{ item }}</li>
-        </ul>
         <p class="project-row__tech text-muted">{{ project.tech }}</p>
         <p class="project-row__links">
           <a
