@@ -8,7 +8,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 export class AboutComponent implements AfterViewInit {
   // My Drive/CV.pdf — replace the same file in Finder; do not delete and re-upload.
   readonly cvUrl =
-    'https://drive.google.com/uc?export=download&id=1d6BXC9hgNkPLxlIQ-h8COGEiEywO6iqe';
+    'https://drive.google.com/file/d/1d6BXC9hgNkPLxlIQ-h8COGEiEywO6iqe/view';
   photoLoaded = false;
 
   @ViewChild('profilePhoto') profilePhoto?: ElementRef<HTMLImageElement>;
