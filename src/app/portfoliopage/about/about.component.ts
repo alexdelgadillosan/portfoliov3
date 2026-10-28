@@ -1,13 +1,14 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit, AfterViewInit {
-  cvUrl = '';
+export class AboutComponent implements AfterViewInit {
+  // My Drive/CV.pdf — replace the same file in Finder; do not delete and re-upload.
+  readonly cvUrl =
+    'https://drive.google.com/uc?export=download&id=1d6BXC9hgNkPLxlIQ-h8COGEiEywO6iqe';
   photoLoaded = false;
 
   @ViewChild('profilePhoto') profilePhoto?: ElementRef<HTMLImageElement>;
@@ -46,19 +47,6 @@ export class AboutComponent implements OnInit, AfterViewInit {
     { file: 'tensorflow.png', alt: 'TensorFlow' },
     { file: 'nvidia.png', alt: 'NVIDIA' },
   ];
-
-  constructor(private http: HttpClient) {}
-
-  ngOnInit(): void {
-    this.http.get<{ url: string }>('assets/cv/cv.json').subscribe({
-      next: (data) => {
-        this.cvUrl = data.url || '';
-      },
-      error: () => {
-        this.cvUrl = '';
-      },
-    });
-  }
 
   ngAfterViewInit(): void {
     const img = this.profilePhoto?.nativeElement;
